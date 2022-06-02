@@ -1,6 +1,8 @@
+print ("start script")
 import telebot
+from config import token
 from telebot import types
-token = "5407161599:AAHYHs9QL-fZ-5OkkqChkfnsaXZvFQCgc8c"
+print ("import Ok") 
 bot = telebot.TeleBot(token)
 @bot.message_handler(commands=['start'])
 def start_message(message):
@@ -9,4 +11,4 @@ def start_message(message):
 def echo_all(message):
 	bot.reply_to(message, message.text)
 bot.infinity_polling()
-print ("all Ok")
+print ("all Ok") 
